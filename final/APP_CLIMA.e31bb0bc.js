@@ -29674,7 +29674,46 @@ var Header = function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../../../ASSETS/nube01.png":"src/ASSETS/nube01.png","./header.css":"src/REACT/components/HEADER/header.css"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../../../ASSETS/nube01.png":"src/ASSETS/nube01.png","./header.css":"src/REACT/components/HEADER/header.css"}],"src/REACT/components/FOOTER/footer.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/REACT/components/FOOTER/footer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./footer.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Footer = function Footer() {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("footer", {
+    id: "footer",
+    className: "footer"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "text-footer"
+  }, "v1.0"), /*#__PURE__*/_react.default.createElement("p", {
+    className: "text-footer"
+  }, "Created with love \u2764 by", /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://twitter.com/JA54312",
+    target: "_blank",
+    rel: "noopener noreferrer",
+    alt: "enlace a twitter de @JA54312"
+  }, "@JA54312")), /*#__PURE__*/_react.default.createElement("p", {
+    className: "text-footer"
+  }, "MX")));
+};
+
+var _default = Footer;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./footer.css":"src/REACT/components/FOOTER/footer.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29688,16 +29727,18 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _header = _interopRequireDefault(require("./src/REACT/components/HEADER/header"));
 
+var _footer = _interopRequireDefault(require("./src/REACT/components/FOOTER/footer"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
 
 var entryPointMalta = document.getElementById("root");
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), entryPointMalta);
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./src/REACT/components/HEADER/header":"src/REACT/components/HEADER/header.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./src/REACT/components/HEADER/header":"src/REACT/components/HEADER/header.js","./src/REACT/components/FOOTER/footer":"src/REACT/components/FOOTER/footer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29725,7 +29766,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38907" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36563" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
