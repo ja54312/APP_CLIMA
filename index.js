@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Header from "./src/REACT/components/HEADER/header";
 
 export default function App(){
     return(
       <>
-          <h2>App Clima</h2>
+          <Header/>
       </>
     )
   }

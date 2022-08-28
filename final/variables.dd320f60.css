@@ -1,7 +1,8 @@
 :root {
-    --header-color:#212529;
+    --header-color:#0B2239;
     --text-navbar-color:#F3F8FB;
     --footer-color:#212529;
     --text-footer-color:#F3F8FB;
-    --fondo-color:#F3F2EF;
+    --fondo-color:#b7cddb;
+    --fuente-principal:'Yanone Kaffeesatz', sans-serif;
 }
