@@ -29568,6 +29568,108 @@ if ("development" === 'production') {
 }
 },{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"src/ASSETS/nube01.png":[function(require,module,exports) {
 module.exports = "/nube01.36ca8589.png";
+},{}],"src/REACT/helpers/example.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var data = {
+  "wind_cdir": "NNE",
+  "rh": 36,
+  "pod": "d",
+  "lon": -99.0872,
+  "pres": 789.7,
+  "timezone": "America/Mexico_City",
+  "ob_time": "2022-08-28 22:38",
+  "country_code": "MX",
+  "clouds": 0,
+  "ts": 1661726291,
+  "solar_rad": 407.2,
+  "state_code": "09",
+  "city_name": "Venustiano Carranza",
+  "wind_spd": 2.1,
+  "slp": 1020.3,
+  "wind_cdir_full": "Norte-Noreste",
+  "sunrise": "12:20",
+  "app_temp": 24.5,
+  "dni": 757.49,
+  "vis": 16,
+  "sources": ["MMMX"],
+  "h_angle": 60,
+  "dewpt": 8.9,
+  "snow": 0,
+  "aqi": 100,
+  "dhi": 81.96,
+  "wind_dir": 20,
+  "elev_angle": 25.9,
+  "ghi": 407.21,
+  "precip": 0,
+  "sunset": "00:54",
+  "lat": 19.4314,
+  "uv": 3.05275,
+  "datetime": "2022-08-28:22",
+  "temp": 25,
+  "weather": {
+    "icon": "c01d",
+    "code": 800,
+    "description": "Cielo despejado"
+  },
+  "station": "MMMX"
+}; // {
+//     "data": [
+//         {
+//             "wind_cdir": "N",
+//             "rh": 60,
+//             "pod": "d",
+//             "lon": -99.0872,
+//             "pres": 789.5,
+//             "timezone": "America/Mexico_City",
+//             "ob_time": "2022-08-28 23:11",
+//             "country_code": "MX",
+//             "clouds": 45,
+//             "ts": 1661728271,
+//             "solar_rad": 385.6,
+//             "state_code": "09",
+//             "city_name": "Venustiano Carranza",
+//             "wind_spd": 1,
+//             "slp": 1020,
+//             "wind_cdir_full": "Norte",
+//             "sunrise": "12:20",
+//             "app_temp": 25.2,
+//             "dni": 757.49,
+//             "vis": 16,
+//             "sources": [
+//                 "MMMX"
+//             ],
+//             "h_angle": 75,
+//             "dewpt": 16.7,
+//             "snow": 0,
+//             "aqi": 100,
+//             "dhi": 81.96,
+//             "wind_dir": 0,
+//             "elev_angle": 25.9,
+//             "ghi": 407.21,
+//             "precip": 0,
+//             "sunset": "00:54",
+//             "lat": 19.4314,
+//             "uv": 2.10487,
+//             "datetime": "2022-08-28:23",
+//             "temp": 25,
+//             "weather": {
+//                 "icon": "c02d",
+//                 "code": 802,
+//                 "description": "Nubes dispersas"
+//             },
+//             "station": "MMMX"
+//         }
+//     ],
+//     "count": 1
+// }
+
+var _default = data;
+exports.default = _default;
 },{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
@@ -29652,11 +29754,19 @@ var _react = _interopRequireDefault(require("react"));
 
 var _nube = _interopRequireDefault(require("../../../ASSETS/nube01.png"));
 
+var _example = _interopRequireDefault(require("../../helpers/example"));
+
 require("./header.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//LIBRERIAS
+//IMPORTS
+//ESTILOS
 var Header = function Header() {
+  var País = _example.default.country_code;
+  var Ciudad = _example.default.city_name; //console.log(País,Ciudad)
+
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("header", {
     id: "header",
     className: "header"
@@ -29664,17 +29774,244 @@ var Header = function Header() {
     className: "header-navbar"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "container-fluid"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "container-Logo"
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: _nube.default,
     className: "header-logo"
   }), /*#__PURE__*/_react.default.createElement("div", {
     className: "header-title"
-  }, "App Clima")))));
+  }, "App Clima")), /*#__PURE__*/_react.default.createElement("div", null), /*#__PURE__*/_react.default.createElement("div", {
+    className: "container-ciudad"
+  }, /*#__PURE__*/_react.default.createElement("span", null, Ciudad, ",", País))))));
 };
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","../../../ASSETS/nube01.png":"src/ASSETS/nube01.png","./header.css":"src/REACT/components/HEADER/header.css"}],"src/REACT/components/FOOTER/footer.css":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../../../ASSETS/nube01.png":"src/ASSETS/nube01.png","../../helpers/example":"src/REACT/helpers/example.js","./header.css":"src/REACT/components/HEADER/header.css"}],"src/REACT/hooks/useModal.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = require("react");
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var useModal = function useModal() {
+  var initialValue = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
+  var _useState = (0, _react.useState)(initialValue),
+      _useState2 = _slicedToArray(_useState, 2),
+      isOpenModal = _useState2[0],
+      setIsOpenModal = _useState2[1];
+
+  var closeModal = function closeModal() {
+    setIsOpenModal(false);
+  };
+
+  var openModal = function openModal() {
+    setIsOpenModal(true);
+  };
+
+  return [isOpenModal, openModal, closeModal];
+};
+
+var _default = useModal;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"src/REACT/elements/modal/Modal.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/REACT/elements/modal/Modal.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./Modal.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/* Modal recibe:
+isOpen = estado inicial del modal (abierto o cerrado)
+children = contenido del modal
+*/
+var Modal = function Modal(_ref) {
+  var isOpen = _ref.isOpen,
+      closeModal = _ref.closeModal,
+      children = _ref.children;
+
+  var handleModalDialogClick = function handleModalDialogClick(e) {
+    e.stopPropagation();
+  };
+
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal-react ".concat(isOpen && "modal-react-open"),
+    onClick: closeModal
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal-react__dialog",
+    onClick: handleModalDialogClick
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal-react__dialog--children"
+  }, children)));
+};
+
+var _default = Modal;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./Modal.css":"src/REACT/elements/modal/Modal.css"}],"src/REACT/components/UBICACION/ubicacion.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/REACT/components/UBICACION/ubicacion.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _useModal3 = _interopRequireDefault(require("../../hooks/useModal"));
+
+var _Modal = _interopRequireDefault(require("../../elements/modal/Modal"));
+
+var _example = _interopRequireDefault(require("../../helpers/example"));
+
+require("./ubicacion.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+var Ubicacion = function Ubicacion() {
+  var _useModal = (0, _useModal3.default)(false),
+      _useModal2 = _slicedToArray(_useModal, 3),
+      isOpenModal = _useModal2[0],
+      openModal = _useModal2[1],
+      closeModal = _useModal2[2];
+
+  var _useState = (0, _react.useState)(),
+      _useState2 = _slicedToArray(_useState, 2),
+      latitude = _useState2[0],
+      setLatitude = _useState2[1];
+
+  var _useState3 = (0, _react.useState)(),
+      _useState4 = _slicedToArray(_useState3, 2),
+      longitude = _useState4[0],
+      setLongitude = _useState4[1];
+
+  console.log(_example.default, 'data');
+
+  var PermiteNavegacion = function PermiteNavegacion() {
+    if (!!navigator.geolocation) {
+      console.log('si permite');
+      navigator.geolocation.getCurrentPosition(function (position) {
+        //console.log(position)
+        setLatitude(position.coords.latitude);
+        setLongitude(position.coords.longitude); //console.log(position.coords.latitude,latitude)
+        //console.log(position.coords.longitude,longitude)
+      });
+    } else {
+      console.log('no permite');
+    }
+  };
+
+  var NoPermiteNavegacion = function NoPermiteNavegacion() {
+    console.log('no permite');
+  };
+
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "container-ubicacion"
+  }, /*#__PURE__*/_react.default.createElement("div", null, "Permisos para ubicacion"), /*#__PURE__*/_react.default.createElement("button", {
+    id: "pedirvan",
+    onClick: openModal
+  }, "Permisos"), /*#__PURE__*/_react.default.createElement("div", null, "por navegador")), /*#__PURE__*/_react.default.createElement(_Modal.default, {
+    isOpen: isOpenModal,
+    closeModal: closeModal
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "header-modal-ubicacion"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "modal-react__dialog--button-close",
+    onClick: closeModal
+  }, "x")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "container-modal-ubicacion"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "text-modal-ubicacion"
+  }, "Desea permitir la ubicaci\xF3n en su dispositivo?"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "container-botones-ubicacion"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "boton-ubicacion Si",
+    onClick: PermiteNavegacion
+  }, "Si"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "boton-ubicacion No",
+    onClick: NoPermiteNavegacion
+  }, "No")))));
+};
+
+var _default = Ubicacion;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../../hooks/useModal":"src/REACT/hooks/useModal.js","../../elements/modal/Modal":"src/REACT/elements/modal/Modal.js","../../helpers/example":"src/REACT/helpers/example.js","./ubicacion.css":"src/REACT/components/UBICACION/ubicacion.css"}],"src/REACT/components/BODY/body.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/REACT/components/BODY/body.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+require("./body.css");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//LIBRERIAS
+//ESTILOS
+var Body = function Body() {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("h2", null, "soy un body"));
+};
+
+var _default = Body;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./body.css":"src/REACT/components/BODY/body.css"}],"src/REACT/components/FOOTER/footer.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -29689,11 +30026,17 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _example = _interopRequireDefault(require("../../helpers/example"));
+
 require("./footer.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//LIBRERIAS
+//IMPORTS
+//ESTILOS
 var Footer = function Footer() {
+  var País = _example.default.country_code;
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("footer", {
     id: "footer",
     className: "footer"
@@ -29708,12 +30051,12 @@ var Footer = function Footer() {
     alt: "enlace a twitter de @JA54312"
   }, "@JA54312")), /*#__PURE__*/_react.default.createElement("p", {
     className: "text-footer"
-  }, "MX")));
+  }, País)));
 };
 
 var _default = Footer;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","./footer.css":"src/REACT/components/FOOTER/footer.css"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../../helpers/example":"src/REACT/helpers/example.js","./footer.css":"src/REACT/components/FOOTER/footer.css"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29727,18 +30070,24 @@ var _reactDom = _interopRequireDefault(require("react-dom"));
 
 var _header = _interopRequireDefault(require("./src/REACT/components/HEADER/header"));
 
+var _ubicacion = _interopRequireDefault(require("./src/REACT/components/UBICACION/ubicacion"));
+
+var _body = _interopRequireDefault(require("./src/REACT/components/BODY/body"));
+
 var _footer = _interopRequireDefault(require("./src/REACT/components/FOOTER/footer"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//LIBRERIAS
+//COMPONENTES
 function App() {
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_header.default, null), /*#__PURE__*/_react.default.createElement(_ubicacion.default, null), /*#__PURE__*/_react.default.createElement(_body.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
 
 var entryPointMalta = document.getElementById("root");
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), entryPointMalta);
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./src/REACT/components/HEADER/header":"src/REACT/components/HEADER/header.js","./src/REACT/components/FOOTER/footer":"src/REACT/components/FOOTER/footer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./src/REACT/components/HEADER/header":"src/REACT/components/HEADER/header.js","./src/REACT/components/UBICACION/ubicacion":"src/REACT/components/UBICACION/ubicacion.js","./src/REACT/components/BODY/body":"src/REACT/components/BODY/body.js","./src/REACT/components/FOOTER/footer":"src/REACT/components/FOOTER/footer.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -29766,7 +30115,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36563" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42889" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

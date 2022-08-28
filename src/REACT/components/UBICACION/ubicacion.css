@@ -1,0 +1,45 @@
+/*Ubicacion*/
+.container-ubicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Modal*/
+.header-modal-ubicacion{
+    min-width: 310px;
+    background-color: var(--header-color);
+}
+.header-modal-ubicacion .modal-react__dialog--button-close{
+    background-color: var(--header-color);
+    text-align: right;
+    padding: 5px;
+    font-size: 20px;
+}
+.container-modal-ubicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+}
+.text-modal-ubicacion{
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+.container-botones-ubicacion{
+    display: flex;
+}
+.boton-ubicacion{
+    padding: 5px;
+    min-width: 80px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.Si{
+    background-color: green;
+}
+.No{
+    background-color: red;
+}
