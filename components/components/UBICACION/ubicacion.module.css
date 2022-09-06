@@ -1,0 +1,45 @@
+/*Ubicacion*/
+.containerUbicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*Modal*/
+.headerModalUbicacion{
+    min-width: 310px;
+    background-color: var(--header-color);
+}
+.headerModalUbicacion .modalReact__dialogButtonClose{
+    background-color: var(--header-color);
+    text-align: right;
+    padding: 5px;
+    font-size: 20px;
+}
+.container_modal_ubicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+}
+.text_modal_ubicacion{
+    font-size: 18px;
+    padding-bottom: 5px;
+}
+.container_botones_ubicacion{
+    display: flex;
+}
+.boton_ubicacion{
+    padding: 5px;
+    min-width: 80px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.Si{
+    background-color: green;
+}
+.No{
+    background-color: red;
+}

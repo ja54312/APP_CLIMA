@@ -1,0 +1,36 @@
+.modal_react {
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  .modal_react__dialog {
+    background-color: #fff;
+    width: auto;
+    height: auto;
+    color: #000;
+    border-radius: 5px;
+  }
+  .modal_react__dialog__button-close {
+    cursor: pointer;
+    color: #fff;
+    margin-left: auto;
+    font-size: 22px;
+  }
+  .modal_react__dialog__children {
+    height:inherit;
+  }
+  .modal_react_open {
+    display: grid;
+  }
+  @media  screen and (max-width:767px) {
+    .modal_react__dialog{
+      margin: 0 10px;  
+    }
+  }
