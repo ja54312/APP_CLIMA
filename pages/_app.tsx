@@ -1,10 +1,17 @@
-import {AppProps} from 'next/app'
+import {AppProps} from '../node_modules/next/app'
+import React from 'react'
+import Head from '../node_modules/next/head'
 import '../styles/index.css'
 import '../styles/variables.css'
 
 function MyApp({ Component, pageProps }:AppProps) {
     return(
+          <>
+            <Head>
+              <title>APP CLIMA</title>
+            </Head>
             <Component {...pageProps} />   
+          </>
     )      
 }
   

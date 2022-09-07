@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import useModal from '../../hooks/useModal';
 //COMPONENTES
 import Modal from '../../elements/modal/Modal';
-import data from '../../helpers/example'
+import data from '../../../database/data'
 //ESTILOS
 import styles from './ubicacion.module.css'
 
@@ -20,11 +20,8 @@ const Ubicacion = () => {
                          console.log('si permite')
                          navigator.geolocation.getCurrentPosition(
                             function(position:object) {
-                                //console.log(position)
                                 setLatitude(position.coords.latitude)
                                 setLongitude(position.coords.longitude)
-                                //console.log(position.coords.latitude,latitude)
-                                //console.log(position.coords.longitude,longitude)
                             }
                          )
                      }else{

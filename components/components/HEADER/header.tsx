@@ -1,16 +1,25 @@
 //LIBRERIAS
 import React from 'react'
 //IMPORTS
-import Image from 'next/image'
-import data from '../../helpers/example'
+import Image from  '../../../node_modules/next/image'
+import data from '../../../database/data'
 //ESTILOS
 import styles from './header.module.css'
+
+// export const getServerSideProps = async () => {
+//     const response = await fetch('https://github.com/ja54312/APP_CLIMA/api/index')
+//     const data2:object = await response.json()
+//     return {
+//         data2
+//     }
+// }
 
 const Header = () => {
 
     let País = data.country_code
     let Ciudad = data.city_name
     //console.log(País,Ciudad)
+    //console.log(data2,"data2")
 
     return(
         <>
