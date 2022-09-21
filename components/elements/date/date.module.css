@@ -1,0 +1,15 @@
+.containerFecha{
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.imageFecha{
+    background-color: inherit;
+}
+.formatoFecha{
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}

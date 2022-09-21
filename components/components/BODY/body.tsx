@@ -1,12 +1,14 @@
 //LIBRERIAS
 import React from 'react'
+//COMPONENTS
+import Place from '../PLACE/place'
 //ESTILOS
 import styles from './body.module.css'
 
 const Body = () =>{
     return(
         <>
-            <h2>soy un body</h2>
+            <Place/>
         </>
     )
 }
