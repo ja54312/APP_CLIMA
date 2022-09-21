@@ -15,27 +15,27 @@ const Ubicacion = () => {
     const [longitude,setLongitude] = useState();
     //console.log(data,'data')
 
-    const PermiteNavegacion = () => {
-        if(!!navigator.geolocation){
-                         console.log('si permite')
-                         navigator.geolocation.getCurrentPosition(
-                            function(position:object) {
-                                setLatitude(position.coords.latitude)
-                                setLongitude(position.coords.longitude)
-                            }
-                         )
-                     }else{
-                         console.log('no permite')
-                     }
-    }
+    // const PermiteNavegacion = () => {
+    //     if(!!navigator.geolocation){
+    //                      console.log('si permite')
+    //                      navigator.geolocation.getCurrentPosition(
+    //                         function(position:object) {
+    //                             setLatitude(position.coords.latitude)
+    //                             setLongitude(position.coords.longitude)
+    //                         }
+    //                      )
+    //                  }else{
+    //                      console.log('no permite')
+    //                  }
+    // }
 
-    const NoPermiteNavegacion = () => {
-        console.log('no permite')
-    }
+    // const NoPermiteNavegacion = () => {
+    //     console.log('no permite')
+    // }
 
     return(
         <>
-            <div className={styles.containerUbicacion}>
+            {/* <div className={styles.containerUbicacion}>
                 <div>Permisos para ubicacion</div>
                 <button id='pedirvan' onClick={openModal}>Permisos</button>
                 <div>por navegador</div>
@@ -56,7 +56,7 @@ const Ubicacion = () => {
                         <button className={`${styles.boton_ubicacion} + ${styles.No}`} onClick={NoPermiteNavegacion}>No</button>
                     </div>
                 </div> 
-            </Modal>
+            </Modal> */}
         </>
     )
 
